@@ -4,6 +4,7 @@
   "description": "A library for parsing world of warcraft classic combatlog files",
   "main": "build/main/index.js",
   "module": "build/module/index.js",
+  "typings": "build/main/index.d.ts",
   "scripts": {},
   "devDependencies": {
     "@types/node": "^18.7.18",
