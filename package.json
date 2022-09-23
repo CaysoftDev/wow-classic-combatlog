@@ -5,7 +5,14 @@
   "main": "build/main/index.js",
   "module": "build/module/index.js",
   "typings": "build/main/index.d.ts",
-  "scripts": {},
+  "scripts": {
+    "build": "run-s build:main build:module",
+    "build:main": "ttsc -p tsconfig.json",
+    "build:module": "ttsc -p tsconfig.module.json",
+    "build:watch": "run-p watch:build:main watch:build:module",
+    "build:watch:main": "ttsc -p tsconfig.json -w",
+    "build:watch:module": "ttsc -p tsconfig.module.json -w"
+  },
   "devDependencies": {
     "@types/node": "^18.7.18",
     "npm-run-all": "^4.1.5",
