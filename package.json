@@ -1,0 +1,37 @@
+{
+  "name": "@caysoft/wow-classic-combatlog",
+  "version": "1.0.0",
+  "description": "A library for parsing world of warcraft classic combatlog files",
+  "main": "build/main/index.js",
+  "module": "build/module/index.js",
+  "scripts": {},
+  "devDependencies": {
+    "@types/node": "^18.7.18",
+    "npm-run-all": "^4.1.5",
+    "standard-version": "^9.5.0",
+    "typedoc": "^0.23.7",
+    "typescript": "^4.8.3",
+    "typescript-transform-paths": "^3.3.1",
+    "ttypescript": "^1.5.13"
+  },
+  "files": [
+    "build/main",
+    "build/module",
+    "!**/*.spec.*",
+    "!**/*.json",
+    "CHANGELOG.md",
+    "LICENSE",
+    "README.md"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/caysoftdev/wow-classic-combatlog.git"
+  },
+  "keywords": ["world of warcraft", "wow", "wow classic", "combatlog", "combat log"],
+  "author": "CaysoftDev",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/caysoftdev/wow-classic-combatlog/issues"
+  },
+  "homepage": "https://github.com/caysoftdev/wow-classic-combatlog#readme"
+}

@@ -1,0 +1,6 @@
+{
+  "out": "docs",
+  "cleanOutputDir": true,
+  "tsconfig": "tsconfig.json",
+  "entryPoints": ["src/index.ts"]
+}
