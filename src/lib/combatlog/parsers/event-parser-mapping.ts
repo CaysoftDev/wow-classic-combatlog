@@ -1,4 +1,10 @@
-import {CombatLogVersionParser} from '#/combatlog/parsers/events';
+import {
+  CombatLogVersionParser,
+  MapChangeParser,
+  SpellParser,
+  UnknownEventParser,
+  ZoneChangeParser
+} from '#/combatlog/parsers/events';
 import {EventParser} from '#/combatlog/parsers/event-parser';
 import {Type} from '#/combatlog/types';
 
@@ -6,4 +12,51 @@ export type EventParserMap = {[key: string]: Type<EventParser>};
 
 export const EventParserMapping: EventParserMap = {
   'COMBAT_LOG_VERSION': CombatLogVersionParser,
+  'COMBATANT_INFO': UnknownEventParser,
+  'DAMAGE_SHIELD': SpellParser,
+  'DAMAGE_SHIELD_MISSED': SpellParser,
+  'DAMAGE_SPLIT': SpellParser,
+  'EMOTE': UnknownEventParser,
+  'ENCOUNTER_END': UnknownEventParser,
+  'ENCOUNTER_START': UnknownEventParser,
+  'ENVIRONMENTAL_DAMAGE': SpellParser,
+  'MAP_CHANGE': MapChangeParser,
+  'PARTY_KILL': UnknownEventParser,
+  'RANGE_DAMAGE': SpellParser,
+  'RANGE_MISSED': SpellParser,
+  'SPELL_CAST_START': SpellParser,
+  'SPELL_AURA_APPLIED': SpellParser,
+  'SPELL_AURA_REMOVED': SpellParser,
+  'SPELL_PERIODIC_ENERGIZE': SpellParser,
+  'SPELL_BUILDING_DAMAGE': SpellParser,
+  'SPELL_CAST_SUCCESS': SpellParser,
+  'SPELL_DRAIN': SpellParser,
+  'SPELL_DAMAGE': SpellParser,
+  'SPELL_MISSED': SpellParser,
+  'SPELL_SUMMON': SpellParser,
+  'SPELL_AURA_APPLIED_DOSE': SpellParser,
+  'SPELL_AURA_REFRESH': SpellParser,
+  'SPELL_ENERGIZE': SpellParser,
+  'SPELL_AURA_REMOVED_DOSE': SpellParser,
+  'SPELL_DISPEL': SpellParser,
+  'SPELL_ABSORBED': SpellParser,
+  'SPELL_PERIODIC_MISSED': SpellParser,
+  'SPELL_CAST_FAILED': SpellParser,
+  'SPELL_INTERRUPT': SpellParser,
+  'SPELL_CREATE': SpellParser,
+  'SPELL_PERIODIC_DRAIN': SpellParser,
+  'SPELL_AURA_BROKEN_SPELL': SpellParser,
+  'SPELL_AURA_BROKEN': SpellParser,
+  'SPELL_HEAL': SpellParser,
+  'SPELL_PERIODIC_DAMAGE': SpellParser,
+  'SPELL_PERIODIC_HEAL': SpellParser,
+  'SPELL_INSTAKILL': SpellParser,
+  'SPELL_RESURRECT': SpellParser,
+  'SPELL_STOLEN': SpellParser,
+  'SWING_DAMAGE': UnknownEventParser,
+  'SWING_DAMAGE_LANDED': UnknownEventParser,
+  'SWING_MISSED': UnknownEventParser,
+  'UNIT_DESTROYED': UnknownEventParser,
+  'UNIT_DIED': UnknownEventParser,
+  'ZONE_CHANGE': ZoneChangeParser,
 }
